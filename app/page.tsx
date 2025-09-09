@@ -53,9 +53,9 @@ export default function LearningHub() {
               </div>
             </CardContent>
           </Card>
-          <Card className="border-0 bg-accent/5 hover:bg-accent/10 transition-colors">
+          <Card className="border-0 bg-primary/5 hover:bg-primary/10 transition-colors">
             <CardContent className="p-6 text-center">
-              <div className="text-4xl font-bold text-accent mb-2">93%</div>
+              <div className="text-4xl font-bold text-primary mb-2">93%</div>
               <div className="text-sm text-muted-foreground font-medium">
                 Das empresas investirão em Big Data e IA
               </div>
@@ -102,7 +102,7 @@ export default function LearningHub() {
 
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Zap className="w-6 h-6 text-accent" />
+                    <Zap className="w-6 h-6 text-primary" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground">2027: Mais IA</div>
@@ -160,15 +160,15 @@ export default function LearningHub() {
                 <CardContent className="space-y-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium text-muted-foreground">Funções Administrativas</span>
-                    <Badge variant="secondary">-23%</Badge>
+                    <Badge className="bg-primary text-primary-foreground">-23%</Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium text-muted-foreground">Secretariado Tradicional</span>
-                    <Badge variant="secondary">-18%</Badge>
+                    <Badge className="bg-primary text-primary-foreground">-18%</Badge>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm font-medium text-muted-foreground">Operações Manuais</span>
-                    <Badge variant="secondary">-31%</Badge>
+                    <Badge className="bg-primary text-primary-foreground">-31%</Badge>
                   </div>
                 </CardContent>
               </Card>
@@ -195,7 +195,7 @@ export default function LearningHub() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-8 h-8 text-accent" />
+                <MessageCircle className="w-8 h-8 text-primary" />
               </div>
               <h3 className="font-semibold text-foreground mb-2">Chat Direto</h3>
               <p className="text-sm text-muted-foreground">Converse diretamente com seu mentor</p>

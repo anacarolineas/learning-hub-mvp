@@ -87,7 +87,7 @@ export default function EmpresaDetalhePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-50">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto max-w-6xl px-4 py-8">
         <div className="mb-8">
           <Link href="/empresas">
             <Button variant="ghost" className="mb-4">
@@ -174,12 +174,12 @@ export default function EmpresaDetalhePage() {
                     <h4 className="text-xs font-medium text-gray-700 mb-2">Skills necessárias:</h4>
                     <div className="flex flex-wrap gap-1">
                       {vaga.skills.slice(0, 3).map((skill) => (
-                        <Badge key={skill} variant="secondary" className="text-xs">
+                        <Badge key={skill} className="bg-primary text-xs">
                           {skill}
                         </Badge>
                       ))}
                       {vaga.skills.length > 3 && (
-                        <Badge variant="secondary" className="text-xs">
+                        <Badge className="bg-secondary text-xs">
                           +{vaga.skills.length - 3}
                         </Badge>
                       )}
@@ -226,7 +226,7 @@ export default function EmpresaDetalhePage() {
                       <div className="flex-1">
                         <h3 className="font-semibold text-gray-900 mb-2">{trilha.title}</h3>
                         <p className="text-sm text-gray-600 mb-3 line-clamp-2">{trilha.description}</p>
-                        <div className="flex items-center justify-between">
+                        <div className="flex items-center justify-between mt-2">
                           <Badge variant="outline" className="text-xs">
                             {trilha.level}
                           </Badge>

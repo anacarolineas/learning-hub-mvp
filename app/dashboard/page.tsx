@@ -460,7 +460,7 @@ export default function DashboardPage() {
                         <div className="flex-1">
                           <h4 className="font-semibold text-sm">{trilha.title}</h4>
                           <div className="flex items-center space-x-2 mt-1">
-                            <Badge variant={trilha.free ? "secondary" : "default"} className="text-xs">
+                            <Badge variant={trilha.free ? "yellow" : "secondary"} className="text-xs">
                               {trilha.free ? "Gratuita" : "Premium"}
                             </Badge>
                             <span className="text-xs text-muted-foreground">{trilha.level}</span>

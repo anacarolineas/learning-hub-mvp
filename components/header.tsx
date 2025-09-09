@@ -2,6 +2,7 @@
 
 import { User, Target, Settings, LogOut, UserCircle, Rocket } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
@@ -104,7 +105,14 @@ export default function Header() {
         <div className="flex items-center space-x-8">
           <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-white">UpTrail Hub</span>
+              <Image
+                src="/images/logo-text.png"
+                alt="UpTrail Hub"
+                width={130}
+                height={40}
+                className="h-10 w-auto"
+                priority
+              />
             </div>
           </Link>
           {userData && (

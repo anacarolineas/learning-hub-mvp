@@ -1,119 +1,80 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* Atualizando tokens de design para o hub de aprendizado com cores inspiradoras */
-  --background: oklch(1 0 0); /* #ffffff - Fundo principal limpo */
-  --foreground: oklch(0.35 0 0); /* #475569 - Texto principal */
-  --card: oklch(0.97 0 0); /* #f1f5f9 - Fundo dos cards */
-  --card-foreground: oklch(0.35 0 0); /* #475569 - Texto dos cards */
-  --popover: oklch(1 0 0); /* #ffffff - Fundo de popovers */
-  --popover-foreground: oklch(0.35 0 0); /* #475569 - Texto de popovers */
-  --primary: oklch(0.45 0.15 160); /* #059669 - Verde emerald para crescimento */
-  --primary-foreground: oklch(1 0 0); /* #ffffff - Texto em botões primários */
-  --secondary: oklch(0.55 0.15 160); /* #10b981 - Verde mais claro para ações secundárias */
-  --secondary-foreground: oklch(1 0 0); /* #ffffff - Texto em botões secundários */
-  --muted: oklch(0.97 0 0); /* #f1f5f9 - Elementos menos destacados */
-  --muted-foreground: oklch(0.35 0 0); /* #475569 - Texto de elementos menos destacados */
-  --accent: oklch(0.55 0.15 160); /* #10b981 - Elementos interativos */
-  --accent-foreground: oklch(1 0 0); /* #ffffff - Texto em elementos interativos */
-  --destructive: oklch(0.6 0.2 25); /* #ff4d4d - Ações que requerem atenção */
-  --destructive-foreground: oklch(1 0 0); /* #ffffff - Texto em ações destrutivas */
-  --border: oklch(0.92 0 0); /* #e2e8f0 - Bordas de elementos */
-  --input: oklch(0.97 0 0); /* #f1f5f9 - Fundo de campos de entrada */
-  --ring: oklch(0.45 0.15 160); /* #059669 - Animações de foco */
-  --chart-1: oklch(0.55 0.15 160); /* #10b981 - Cor para gráficos (1) */
-  --chart-2: oklch(0.45 0.15 160); /* #059669 - Cor para gráficos (2) */
-  --chart-3: oklch(0.35 0 0); /* #475569 - Cor para gráficos (3) */
-  --chart-4: oklch(1 0 0); /* #ffffff - Cor para gráficos (4) */
-  --chart-5: oklch(0.97 0 0); /* #f1f5f9 - Cor para gráficos (5) */
+  --background: 0 0% 100%; /* #ffffff - Fundo principal limpo */
+  --foreground: 215 25% 27%; /* #475569 - Texto principal */
+  --card: 210 40% 98%; /* #f1f5f9 - Fundo dos cards */
+  --card-foreground: 215 25% 27%; /* #475569 - Texto dos cards */
+  --popover: 0 0% 100%; /* #ffffff - Fundo de popovers */
+  --popover-foreground: 215 25% 27%; /* #475569 - Texto de popovers */
+  --primary: 158 85% 25%; /* #063825 - Verde escuro semelhante ao header */
+  --primary-foreground: 0 0% 100%; /* #ffffff - Texto em botões primários */
+  --secondary: 158 64% 52%; /* #10b981 - Verde mais claro para ações secundárias */
+  --secondary-foreground: 0 0% 100%; /* #ffffff - Texto em botões secundários */
+  --muted: 210 40% 98%; /* #f1f5f9 - Elementos menos destacados */
+  --muted-foreground: 215 25% 27%; /* #475569 - Texto de elementos menos destacados */
+  --accent: 158 64% 52%; /* #10b981 - Elementos interativos */
+  --accent-foreground: 0 0% 100%; /* #ffffff - Texto em elementos interativos */
+  --destructive: 0 84% 60%; /* #ff4d4d - Ações que requerem atenção */
+  --destructive-foreground: 0 0% 100%; /* #ffffff - Texto em ações destrutivas */
+  --border: 214 32% 91%; /* #e2e8f0 - Bordas de elementos */
+  --input: 210 40% 98%; /* #f1f5f9 - Fundo de campos de entrada */
+  --ring: 158 85% 25%; /* #063825 - Animações de foco */
+  --chart-1: 158 64% 52%; /* #10b981 - Cor para gráficos (1) */
+  --chart-2: 158 64% 52%; /* #059669 - Cor para gráficos (2) */
+  --chart-3: 215 25% 27%; /* #475569 - Cor para gráficos (3) */
+  --chart-4: 0 0% 100%; /* #ffffff - Cor para gráficos (4) */
+  --chart-5: 210 40% 98%; /* #f1f5f9 - Cor para gráficos (5) */
   --radius: 0.5rem; /* Arredondamento de cantos */
-  --sidebar: oklch(1 0 0); /* #ffffff - Fundo da barra lateral */
-  --sidebar-foreground: oklch(0.35 0 0); /* #475569 - Texto da barra lateral */
-  --sidebar-primary: oklch(0.45 0.15 160); /* #059669 - Destaque na barra lateral */
-  --sidebar-primary-foreground: oklch(1 0 0); /* #ffffff - Texto em destaque na barra lateral */
-  --sidebar-accent: oklch(0.55 0.15 160); /* #10b981 - Acento na barra lateral */
-  --sidebar-accent-foreground: oklch(1 0 0); /* #ffffff - Texto em acento na barra lateral */
-  --sidebar-border: oklch(0.92 0 0); /* #e2e8f0 - Bordas da barra lateral */
-  --sidebar-ring: oklch(0.45 0.15 160); /* #059669 - Animações de foco na barra lateral */
+  --sidebar: 0 0% 100%; /* #ffffff - Fundo da barra lateral */
+  --sidebar-foreground: 215 25% 27%; /* #475569 - Texto da barra lateral */
+  --sidebar-primary: 158 85% 25%; /* #063825 - Destaque na barra lateral */
+  --sidebar-primary-foreground: 0 0% 100%; /* #ffffff - Texto em destaque na barra lateral */
+  --sidebar-accent: 158 64% 52%; /* #10b981 - Acento na barra lateral */
+  --sidebar-accent-foreground: 0 0% 100%; /* #ffffff - Texto em acento na barra lateral */
+  --sidebar-border: 214 32% 91%; /* #e2e8f0 - Bordas da barra lateral */
+  --sidebar-ring: 158 85% 25%; /* #063825 - Animações de foco na barra lateral */
 }
 
 .dark {
   /* Mantendo modo escuro com ajustes para o tema de aprendizado */
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.2 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.55 0.15 160); /* Verde emerald mais claro no escuro */
-  --primary-foreground: oklch(0.145 0 0);
-  --secondary: oklch(0.3 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.25 0 0);
-  --muted-foreground: oklch(0.7 0 0);
-  --accent: oklch(0.55 0.15 160);
-  --accent-foreground: oklch(0.145 0 0);
-  --destructive: oklch(0.6 0.2 25);
-  --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.25 0 0);
-  --input: oklch(0.25 0 0);
-  --ring: oklch(0.55 0.15 160);
-  --chart-1: oklch(0.55 0.15 160);
-  --chart-2: oklch(0.45 0.15 160);
-  --chart-3: oklch(0.7 0 0);
-  --chart-4: oklch(0.3 0 0);
-  --chart-5: oklch(0.25 0 0);
-  --sidebar: oklch(0.2 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.55 0.15 160);
-  --sidebar-primary-foreground: oklch(0.145 0 0);
-  --sidebar-accent: oklch(0.25 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.25 0 0);
-  --sidebar-ring: oklch(0.55 0.15 160);
+  --background: 222 84% 5%; /* #0f172a - Fundo escuro */
+  --foreground: 210 40% 98%; /* #f1f5f9 - Texto claro */
+  --card: 222 84% 5%; /* #0f172a - Fundo dos cards escuros */
+  --card-foreground: 210 40% 98%; /* #f1f5f9 - Texto dos cards claros */
+  --popover: 222 84% 5%; /* #0f172a - Fundo de popovers escuros */
+  --popover-foreground: 210 40% 98%; /* #f1f5f9 - Texto de popovers claros */
+  --primary: 158 64% 52%; /* Verde emerald mais claro no escuro */
+  --primary-foreground: 222 84% 5%; /* #0f172a - Texto em botões primários escuros */
+  --secondary: 217 32% 17%; /* #1e293b - Elementos secundários escuros */
+  --secondary-foreground: 210 40% 98%; /* #f1f5f9 - Texto em botões secundários */
+  --muted: 217 32% 17%; /* #1e293b - Elementos menos destacados escuros */
+  --muted-foreground: 215 20% 65%; /* #94a3b8 - Texto de elementos menos destacados */
+  --accent: 158 64% 52%; /* Verde emerald para elementos interativos */
+  --accent-foreground: 222 84% 5%; /* #0f172a - Texto em elementos interativos */
+  --destructive: 0 84% 60%; /* #ff4d4d - Ações que requerem atenção */
+  --destructive-foreground: 210 40% 98%; /* #f1f5f9 - Texto em ações destrutivas */
+  --border: 217 32% 17%; /* #1e293b - Bordas de elementos escuros */
+  --input: 217 32% 17%; /* #1e293b - Fundo de campos de entrada escuros */
+  --ring: 158 64% 52%; /* Verde emerald para animações de foco */
+  --chart-1: 158 64% 52%; /* Verde emerald para gráficos (1) */
+  --chart-2: 158 64% 52%; /* Verde emerald para gráficos (2) */
+  --chart-3: 215 20% 65%; /* #94a3b8 - Cor para gráficos (3) */
+  --chart-4: 217 32% 17%; /* #1e293b - Cor para gráficos (4) */
+  --chart-5: 217 32% 17%; /* #1e293b - Cor para gráficos (5) */
+  --sidebar: 222 84% 5%; /* #0f172a - Fundo da barra lateral escura */
+  --sidebar-foreground: 210 40% 98%; /* #f1f5f9 - Texto da barra lateral claro */
+  --sidebar-primary: 158 64% 52%; /* Verde emerald para destaque na barra lateral */
+  --sidebar-primary-foreground: 222 84% 5%; /* #0f172a - Texto em destaque na barra lateral */
+  --sidebar-accent: 217 32% 17%; /* #1e293b - Acento na barra lateral */
+  --sidebar-accent-foreground: 210 40% 98%; /* #f1f5f9 - Texto em acento na barra lateral */
+  --sidebar-border: 217 32% 17%; /* #1e293b - Bordas da barra lateral */
+  --sidebar-ring: 158 64% 52%; /* Verde emerald para animações de foco na barra lateral */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-}
 
 @layer base {
   * {
